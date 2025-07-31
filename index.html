@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Elena's Artisan Bakery - Professional Baker & Culinary Educator
+    </title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#D97706", secondary: "#F59E0B" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      @keyframes float-slow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      @keyframes float-slower {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+      .animate-float-slow {
+        animation: float-slow 3s ease-in-out infinite;
+      }
+      .animate-float-slower {
+        animation: float-slower 4s ease-in-out infinite;
+      }
+      .hero-bg {
+        background-image: url("./assets/images/hero.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+      <nav class="px-6 py-4">
+        <div class="flex items-center justify-between max-w-7xl mx-auto">
+          <div class="font-['Pacifico'] text-2xl text-primary">logo</div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >About</a
+            >
+            <a
+              href="#classes"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Classes</a
+            >
+            <a
+              href="#recipes"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Recipes</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Contact</a
+            >
+          </div>
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden w-8 h-8 flex items-center justify-center"
+          >
+            <i class="ri-menu-line text-xl"></i>
+          </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t">
+          <div class="flex flex-col space-y-3 pt-4">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >About</a
+            >
+            <a
+              href="#classes"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Classes</a
+            >
+            <a
+              href="#recipes"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Recipes</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero-bg min-h-screen flex items-center relative overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <div class="absolute right-0 w-1/2 h-full z-0 opacity-100 sm:block hidden">
+
+        <span
+          class="absolute top-[15%] right-[25%] bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float-slow"
+          >Artisan Bread</span
+        >
+        <span
+          class="absolute top-[35%] right-[10%] bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float-slower"
+          >French Croissants</span
+        >
+        <span
+          class="absolute top-[55%] right-[30%] bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float-slow"
+          >Danish Pastries</span
+        >
+        <span
+          class="absolute top-[25%] right-[45%] bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float-slower"
+          >Sourdough Pizza</span
+        >
+        <span
+          class="absolute top-[45%] right-[55%] bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float-slow"
+          >Chocolate Eclairs</span
+        >
+        <span
+          class="absolute top-[65%] right-[15%] bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float-slower"
+          >Cinnamon Rolls</span
+        >
+        <span
+          class="absolute top-[75%] right-[40%] bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-float-slow"
+          >Fruit Tarts</span
+        >
+      </div>
+      <div class="relative z-10 w-full px-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="max-w-2xl">
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight"
+            >
+              Artisan Baking Made Simple
+            </h1>
+            <p
+              class="text-base sm:text-lg md:text-xl text-white mb-6 sm:mb-8 opacity-90"
+            >
+              Learn professional baking techniques from a master baker and
+              culinary educator. Transform your kitchen into an artisan bakery.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
+              <button
+                class="bg-primary hover:bg-orange-600 text-white px-4 py-2 !rounded-button font-semibold text-base sm:text-lg transition-colors whitespace-nowrap"
+              >
+                Join a Class
+              </button>
+              <button
+                class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white border border-white px-4 py-2 !rounded-button font-semibold text-base sm:text-lg transition-all backdrop-blur-sm whitespace-nowrap"
+              >
+                Watch on YouTube
+              </button>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+              <div
+                class="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl border border-white border-opacity-20"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-lg overflow-hidden">
+                    <img
+                      src="./assets/images/hero.jpg"
+                      alt="Sourdough"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="text-white">
+                    <h3 class="font-semibold">Sourdough</h3>
+                    <p class="text-sm opacity-80">2,500+ Loaves</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl border border-white border-opacity-20"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-lg overflow-hidden">
+                    <img
+                      src="https://readdy.ai/api/search-image?query=Golden%20croissants%20with%20flaky%20layers%2C%20professional%20food%20photography%20on%20dark%20background%2C%20dramatic%20lighting&width=100&height=100&seq=badge002&orientation=squarish"
+                      alt="Croissants"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="text-white">
+                    <h3 class="font-semibold">Croissants</h3>
+                    <p class="text-sm opacity-80">10,000+ Made</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl border border-white border-opacity-20"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-lg overflow-hidden">
+                    <img
+                      src="https://readdy.ai/api/search-image?query=Happy%20students%20in%20baking%20class%2C%20professional%20kitchen%20environment%2C%20warm%20lighting&width=100&height=100&seq=badge003&orientation=squarish"
+                      alt="Students"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="text-white">
+                    <h3 class="font-semibold">Students</h3>
+                    <p class="text-sm opacity-80">500+ Taught</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About the Baker -->
+    <section id="about" class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1">
+            <img
+              src="./assets/images/user.jpg"
+              alt="Elena Martinez - Professional Baker"
+              class="w-full h-96 md:h-[500px] object-cover object-top rounded-2xl shadow-lg"
+            />
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">
+              Meet Elena Martinez
+            </h2>
+            <h3 class="text-xl text-primary font-semibold mb-4">
+              Master Baker & Culinary Educator
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              With over 15 years of professional baking experience, Elena has
+              worked in Michelin-starred restaurants across Europe and founded
+              three successful artisan bakeries. Her passion lies in making
+              professional baking techniques accessible to home bakers
+              worldwide.
+            </p>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Elena holds certifications from Le Cordon Bleu Paris and has been
+              featured in Food & Wine Magazine, Bon Appétit, and The Great
+              British Bake Off as a guest judge. She believes that great baking
+              starts with understanding the science behind each ingredient.
+            </p>
+            <blockquote
+              class="border-l-4 border-primary pl-6 italic text-lg text-gray-700 mb-6"
+            >
+              "Baking is not just about following recipes—it's about
+              understanding the magic that happens when simple ingredients
+              transform into something extraordinary."
+            </blockquote>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="bg-orange-100 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                >Le Cordon Bleu Certified</span
+              >
+              <span
+                class="bg-orange-100 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                >15+ Years Experience</span
+              >
+              <span
+                class="bg-orange-100 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                >3 Successful Bakeries</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Video -->
+    <section class="py-20 px-6 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Video</h2>
+        <h3 class="text-2xl text-gray-700 mb-8">
+          Master the Perfect Sourdough Starter
+        </h3>
+        <div
+          class="bg-gray-300 aspect-video rounded-2xl mb-6 flex items-center justify-center"
+        >
+          <div class="text-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mb-4 mx-auto"
+            >
+              <i class="ri-play-fill text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-600">Video Player Placeholder</p>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+          Learn the secrets behind creating and maintaining a healthy sourdough
+          starter that will give you perfect bread every time. This
+          comprehensive guide covers everything from initial fermentation to
+          troubleshooting common issues.
+        </p>
+        <button
+          class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 !rounded-button font-semibold transition-colors whitespace-nowrap"
+        >
+          Subscribe to Channel
+        </button>
+      </div>
+    </section>
+    <!-- Recipe Preview Grid -->
+    <section id="recipes" class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Featured Recipes
+          </h2>
+          <p class="text-xl text-gray-600">
+            Discover professional techniques with detailed step-by-step guides
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src="./assets/images/ClassicSourdough.jpg"
+              alt="Classic Sourdough"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Classic Sourdough Bread
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Master the art of traditional sourdough with this foolproof
+                recipe that delivers perfect crust and crumb every time.
+              </p>
+              <button
+                class="text-primary hover:text-orange-600 font-semibold transition-colors whitespace-nowrap"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src="./assets/images/FrenchCroissants.jpg"
+              alt="French Croissants"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                French Butter Croissants
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Learn the lamination technique to create perfectly flaky,
+                buttery croissants that rival any Parisian bakery.
+              </p>
+              <button
+                class="text-primary hover:text-orange-600 font-semibold transition-colors whitespace-nowrap"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src="./assets/images/ChocolateChip.jpg"
+              alt="Chocolate Chip Cookies"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Perfect Chocolate Chip Cookies
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Discover the science behind the perfect cookie texture and learn
+                professional techniques for consistent results.
+              </p>
+              <button
+                class="text-primary hover:text-orange-600 font-semibold transition-colors whitespace-nowrap"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src="./assets/images/PizzaDough.jpg"
+              alt="Pizza Dough"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Neapolitan Pizza Dough
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Create authentic Italian pizza dough with the perfect chew and
+                flavor using traditional fermentation methods.
+              </p>
+              <button
+                class="text-primary hover:text-orange-600 font-semibold transition-colors whitespace-nowrap"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src="./assets/images/DinnerRolls.jpg"
+              alt="Dinner Rolls"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Fluffy Dinner Rolls
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Master the enriched dough technique to create incredibly soft
+                and flavorful dinner rolls for any occasion.
+              </p>
+              <button
+                class="text-primary hover:text-orange-600 font-semibold transition-colors whitespace-nowrap"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src="./assets/images/CinnamonRolls.jpg"
+              alt="Cinnamon Rolls"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Glazed Cinnamon Rolls
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Learn the secrets to perfectly soft, gooey cinnamon rolls with
+                the ideal balance of spice and sweetness.
+              </p>
+              <button
+                class="text-primary hover:text-orange-600 font-semibold transition-colors whitespace-nowrap"
+              >
+                Read More →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Baking Classes -->
+    <section id="classes" class="py-20 px-6 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Baking Classes</h2>
+          <p class="text-xl text-gray-600">
+            Learn from a master baker in small groups or one-on-one sessions
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src="./assets/images/BreadMakingFundamentals.jpg"
+              alt="Bread Making Fundamentals"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Bread Making Fundamentals
+              </h3>
+              <div class="flex items-center gap-4 mb-3">
+                <span class="text-primary font-semibold">$149</span>
+                <span class="text-gray-500">4 hours</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Master the basics of bread making including mixing, kneading,
+                fermentation, and baking techniques.
+              </p>
+              <button
+                class="w-full bg-primary hover:bg-orange-600 text-white py-3 !rounded-button font-semibold transition-colors whitespace-nowrap"
+              >
+                Join Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src="./assets/images/pastry-lamination.jpg"
+              alt="Pastry & Lamination"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Pastry & Lamination
+              </h3>
+              <div class="flex items-center gap-4 mb-3">
+                <span class="text-primary font-semibold">$199</span>
+                <span class="text-gray-500">6 hours</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Learn advanced lamination techniques for croissants, puff
+                pastry, and Danish pastries.
+              </p>
+              <button
+                class="w-full bg-primary hover:bg-orange-600 text-white py-3 !rounded-button font-semibold transition-colors whitespace-nowrap"
+              >
+                Join Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src="./assets/images/Sourdough-Mastery.jpg"
+              alt="Sourdough Mastery"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Sourdough Mastery
+              </h3>
+              <div class="flex items-center gap-4 mb-3">
+                <span class="text-primary font-semibold">$179</span>
+                <span class="text-gray-500">5 hours</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Deep dive into sourdough culture, maintenance, and creating
+                various sourdough breads.
+              </p>
+              <button
+                class="w-full bg-primary hover:bg-orange-600 text-white py-3 !rounded-button font-semibold transition-colors whitespace-nowrap"
+              >
+                Join Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src="./assets/images/CakeDecorating.jpg"
+              alt="Cake Decorating"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Cake Decorating
+              </h3>
+              <div class="flex items-center gap-4 mb-3">
+                <span class="text-primary font-semibold">$129</span>
+                <span class="text-gray-500">3 hours</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Learn professional piping techniques, fondant work, and creative
+                cake decoration methods.
+              </p>
+              <button
+                class="w-full bg-primary hover:bg-orange-600 text-white py-3 !rounded-button font-semibold transition-colors whitespace-nowrap"
+              >
+                Join Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src="./assets/images/Artisan.jpg"
+              alt="Artisan Pizza Workshop"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Artisan Pizza Workshop
+              </h3>
+              <div class="flex items-center gap-4 mb-3">
+                <span class="text-primary font-semibold">$99</span>
+                <span class="text-gray-500">3 hours</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Master authentic Neapolitan pizza dough, sauce, and wood-fired
+                oven techniques.
+              </p>
+              <button
+                class="w-full bg-primary hover:bg-orange-600 text-white py-3 !rounded-button font-semibold transition-colors whitespace-nowrap"
+              >
+                Join Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <img
+              src="./assets/images/PrivateSessions.jpg"
+              alt="Private Sessions"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Private Sessions
+              </h3>
+              <div class="flex items-center gap-4 mb-3">
+                <span class="text-primary font-semibold">$299</span>
+                <span class="text-gray-500">2-4 hours</span>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Personalized one-on-one instruction tailored to your specific
+                baking goals and skill level.
+              </p>
+              <button
+                class="w-full bg-primary hover:bg-orange-600 text-white py-3 !rounded-button font-semibold transition-colors whitespace-nowrap"
+              >
+                Join Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            What Students Say
+          </h2>
+          <p class="text-xl text-gray-600">
+            Real reviews from our baking community
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20happy%20female%20student%20in%20her%20forties%2C%20warm%20smile%2C%20natural%20lighting%2C%20clean%20background%2C%20approachable%20expression%2C%20casual%20professional%20attire&width=80&height=80&seq=student001&orientation=squarish"
+                alt="Sarah Johnson"
+                class="w-12 h-12 rounded-full object-cover object-top mr-4"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Elena's sourdough class completely transformed my baking. Her
+              scientific approach made everything click, and now I'm making
+              bakery-quality bread at home!"
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20male%20student%20in%20his%20thirties%2C%20friendly%20expression%2C%20natural%20lighting%2C%20clean%20background%2C%20casual%20attire%2C%20confident%20smile&width=80&height=80&seq=student002&orientation=squarish"
+                alt="Michael Chen"
+                class="w-12 h-12 rounded-full object-cover object-top mr-4"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900">Michael Chen</h4>
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "The pastry class was incredible! Elena's patience and expertise
+              helped me master lamination techniques I thought were impossible
+              to learn."
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20young%20female%20student%20in%20her%20twenties%2C%20bright%20smile%2C%20natural%20lighting%2C%20clean%20background%2C%20enthusiastic%20expression%2C%20casual%20professional%20style&width=80&height=80&seq=student003&orientation=squarish"
+                alt="Emma Rodriguez"
+                class="w-12 h-12 rounded-full object-cover object-top mr-4"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900">Emma Rodriguez</h4>
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Best investment I've made! Elena's teaching style is so clear and
+              encouraging. I went from burnt cookies to opening my own small
+              bakery business."
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20mature%20male%20student%20in%20his%20fifties%2C%20kind%20expression%2C%20natural%20lighting%2C%20clean%20background%2C%20distinguished%20appearance%2C%20warm%20smile&width=80&height=80&seq=student004&orientation=squarish"
+                alt="Robert Williams"
+                class="w-12 h-12 rounded-full object-cover object-top mr-4"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900">Robert Williams</h4>
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Elena's private session was worth every penny. She tailored the
+              lesson to my specific needs and helped me troubleshoot years of
+              baking problems."
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20middle-aged%20female%20student%2C%20genuine%20smile%2C%20natural%20lighting%2C%20clean%20background%2C%20confident%20expression%2C%20professional%20casual%20attire&width=80&height=80&seq=student005&orientation=squarish"
+                alt="Lisa Thompson"
+                class="w-12 h-12 rounded-full object-cover object-top mr-4"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900">Lisa Thompson</h4>
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "The cake decorating class exceeded my expectations. Elena's
+              techniques are professional-level but explained in a way that's
+              easy to understand and apply."
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20young%20male%20student%20in%20his%20twenties%2C%20enthusiastic%20expression%2C%20natural%20lighting%2C%20clean%20background%2C%20casual%20attire%2C%20bright%20smile&width=80&height=80&seq=student006&orientation=squarish"
+                alt="David Park"
+                class="w-12 h-12 rounded-full object-cover object-top mr-4"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900">David Park</h4>
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Amazing pizza workshop! Elena taught us authentic techniques that
+              I now use for weekly pizza nights with friends. Everyone asks for
+              my secret!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Social Connection -->
+    <section class="py-20 px-6 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Stay Connected</h2>
+        <p class="text-xl text-gray-600 mb-12">
+          Follow my baking journey and get daily tips
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <a href="#" class="group flex flex-col items-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-green-500 rounded-2xl mb-4 group-hover:bg-green-600 transition-colors"
+            >
+              <i class="ri-whatsapp-fill text-white text-2xl"></i>
+            </div>
+            <span class="font-semibold text-gray-900">WhatsApp</span>
+          </a>
+          <a href="#" class="group flex flex-col items-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-pink-500 rounded-2xl mb-4 group-hover:bg-pink-600 transition-colors"
+            >
+              <i class="ri-instagram-fill text-white text-2xl"></i>
+            </div>
+            <span class="font-semibold text-gray-900">Instagram</span>
+          </a>
+          <a href="#" class="group flex flex-col items-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-red-500 rounded-2xl mb-4 group-hover:bg-red-600 transition-colors"
+            >
+              <i class="ri-youtube-fill text-white text-2xl"></i>
+            </div>
+            <span class="font-semibold text-gray-900">YouTube</span>
+          </a>
+          <a href="#" class="group flex flex-col items-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-blue-500 rounded-2xl mb-4 group-hover:bg-blue-600 transition-colors"
+            >
+              <i class="ri-facebook-fill text-white text-2xl"></i>
+            </div>
+            <span class="font-semibold text-gray-900">Facebook</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- WhatsApp CTA -->
+    <section class="py-20 px-6 bg-green-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Ready to Start Baking?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Have questions about classes or want to place a custom order? Let's
+          chat on WhatsApp!
+        </p>
+        <a
+          href="https://wa.me/1234567890"
+          class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 !rounded-button text-lg font-semibold transition-colors whitespace-nowrap"
+        >
+          <div class="w-6 h-6 flex items-center justify-center mr-3">
+            <i class="ri-whatsapp-fill text-xl"></i>
+          </div>
+          Chat on WhatsApp
+        </a>
+        <p class="text-gray-500 mt-4">+1 (555) 123-4567</p>
+      </div>
+    </section>
+    <!-- Newsletter Signup -->
+    <section class="py-20 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Subscribe for Recipes and Tips
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Get weekly baking tips, exclusive recipes, and first access to new
+          classes
+        </p>
+        <form class="max-w-md mx-auto">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="flex-1 px-4 py-3 border border-gray-300 !rounded-button focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              class="flex-1 px-4 py-3 border border-gray-300 !rounded-button focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full sm:w-auto mt-4 bg-primary hover:bg-orange-600 text-white px-8 py-3 !rounded-button font-semibold transition-colors whitespace-nowrap"
+          >
+            Subscribe Now
+          </button>
+        </form>
+        <p class="text-gray-500 text-sm mt-4">No spam, unsubscribe anytime</p>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-12">
+          <div>
+            <div class="font-['Pacifico'] text-2xl text-primary mb-4">logo</div>
+            <p class="text-gray-300 mb-6">
+              Professional baking education and artisan breads crafted with
+              passion and precision.
+            </p>
+            <div class="space-y-2">
+              <p class="text-gray-300">
+                <span class="font-semibold">Email:</span>
+                elena@artisanbakery.com
+              </p>
+              <p class="text-gray-300">
+                <span class="font-semibold">Phone:</span> +1 (555) 123-4567
+              </p>
+              <p class="text-gray-300">
+                <span class="font-semibold">Address:</span> 123 Baker Street,
+                Culinary District, NY 10001
+              </p>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+            <div class="space-y-3">
+              <a
+                href="#home"
+                class="block text-gray-300 hover:text-white transition-colors"
+                >Home</a
+              >
+              <a
+                href="#about"
+                class="block text-gray-300 hover:text-white transition-colors"
+                >About Elena</a
+              >
+              <a
+                href="#classes"
+                class="block text-gray-300 hover:text-white transition-colors"
+                >Baking Classes</a
+              >
+              <a
+                href="#recipes"
+                class="block text-gray-300 hover:text-white transition-colors"
+                >Recipes</a
+              >
+              <a
+                href="#contact"
+                class="block text-gray-300 hover:text-white transition-colors"
+                >Contact</a
+              >
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-green-500 rounded-lg transition-colors"
+              >
+                <i class="ri-whatsapp-fill text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-pink-500 rounded-lg transition-colors"
+              >
+                <i class="ri-instagram-fill text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-red-500 rounded-lg transition-colors"
+              >
+                <i class="ri-youtube-fill text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-blue-500 rounded-lg transition-colors"
+              >
+                <i class="ri-facebook-fill text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p class="text-gray-400">
+            © 2024 Elena's Artisan Bakery. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script id="mobile-menu-handler">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuBtn.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
+    <script id="smooth-scroll-handler">
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              const headerHeight = 80;
+              const targetPosition = target.offsetTop - headerHeight;
+              window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+    <script id="newsletter-form-handler">
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const nameInput = form.querySelector('input[type="text"]');
+          const emailInput = form.querySelector('input[type="email"]');
+          if (nameInput.value && emailInput.value) {
+            alert(
+              "Thank you for subscribing! You'll receive our weekly baking tips soon."
+            );
+            nameInput.value = "";
+            emailInput.value = "";
+          } else {
+            alert("Please fill in both name and email fields.");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
